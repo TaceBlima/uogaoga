@@ -98,11 +98,42 @@
     </style>
 
     <script type="text/javascript">
-    function didLoad() {
-        window.location.href="weiyou://didLoad"  // by decamincow
+         function didLoad() {
+                        if(navigator.userAgent.indexOf("WeGame/0.2.0") !=-1)
+            {
+                  window.location.href="weiyou://didLoad/http://ww3.sinaimg.cn/large/8cf2f67ajw1enmdnww3brj2050050jr7.jpg"  // by decamincow
+                  window.location.href="weiyou://register/RegisterType_WeixinShareContent/registerHandlerForWeixinShareContent"  // by decamincow
+                  window.location.href="weiyou://register/RegisterType_SinaWeiboShareContent/registerHandlerForSinaWeiboContent"  // by decamincow
+                  window.location.href="weiyou://register/RegisterType_FacebookShareContent/registerHandlerForFacebookShareContent"  // by decamincow
+                  window.location.href="weiyou://register/RegisterType_TwitterShareContent/registerHandlerForTwitterShareContent"  // by decamincow
+            }
+                           }
+    </script>
+    <script>
+        // Weixin
+    function registerHandlerForWeixinShareContent()
+    {
+        return "{\"title\":\"标题\", \"description\":\"描述\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
     }
-</script>
 
+        // Weibo
+    function registerHandlerForSinaWeiboContent()
+    {
+        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
+    }
+
+        // Facebook
+    function registerHandlerForFacebookShareContent()
+    {
+        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
+    }
+
+        // Twitter
+    function registerHandlerForTwitterShareContent()
+    {
+        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
+    }
+    </script>
 
    </head>
 <body style="padding:0; margin: 0; background: #000;" onLoad="didLoad()">
