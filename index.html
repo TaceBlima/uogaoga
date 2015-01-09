@@ -98,47 +98,45 @@
     </style>
 
     <script type="text/javascript">
-         function didLoad() {
-            // alert("3");
+        // Weixin
+        function registerHandlerForWeixinShareContent()
+        {
+            var content = { "title": "", "description": "", "icon": "", "link": ""};
+            var json = JSON.stringify(content);
+            return json;
+        }
+        // Weibo
+        function registerHandlerForSinaWeiboContent()
+        {
+            var content = { "description": "", "icon": "", "link": ""};
+            var json = JSON.stringify(content);
+            return json;
+        }
+        // Facebook
+        function registerHandlerForFacebookShareContent()
+        {
+            var content = { "description": "", "icon": "", "link": ""};
+            var json = JSON.stringify(content);
+            return json;
+        }
+        // Twitter
+        function registerHandlerForTwitterShareContent()
+        {
+            var content = { "description": "", "icon": "", "link": ""};
+            var json = JSON.stringify(content);
+            return json;
+        }
+    </script>
+    <script type="text/javascript">
+
+    function didLoad() {
                         if(navigator.userAgent.indexOf("WeGame/0.2.0") !=-1)
             {
-                var weiyouurl = "http:\/\/ww3.sinaimg.cn\/large\/8cf2f67ajw1enmdnww3brj2050050jr7.jpg";
-                var didLoad = "weiyou:\/\/didLoad\/"+weiyouurl;
-                // var vxRegister="weiyou:\/\/register\/RegisterType_WeixinShareContent\/registerHandlerForWeixinShareContent";
-                // var swbRegister="weiyou:\/\/register\/RegisterType_SinaWeiboShareContent\/registerHandlerForSinaWeiboContent";
-                // var fbRegister="weiyou:\/\/register\/RegisterType_FacebookShareContent\/registerHandlerForFacebookShareContent";
-                // var twRegister="weiyou:\/\/register\/RegisterType_TwitterShareContent\/registerHandlerForTwitterShareContent";
-                window.location.href= didLoad;
-
-                
+                window.location.href="weiyou://didLoad/regWeixin/registerHandlerForWeixinShareContent/regSinaWeibo/registerHandlerForSinaWeiboContent/regFacebook/registerHandlerForFacebookShareContent/regTwitter/registerHandlerForTwitterShareContent"  // by decamincow
             }
-                           }
-    </script>
-    <script>
-        // Weixin
-    function registerHandlerForWeixinShareContent()
-    {
-        return "{\"title\":\"标题\", \"description\":\"描述\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
-    }
 
-        // Weibo
-    function registerHandlerForSinaWeiboContent()
-    {
-        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
-    }
-
-        // Facebook
-    function registerHandlerForFacebookShareContent()
-    {
-        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
-    }
-
-        // Twitter
-    function registerHandlerForTwitterShareContent()
-    {
-        return "{\"content\":\"内容\", \"link\":\"http://taceblima.github.io/uogaoga\"}";
-    }
-    </script>
+          }
+</script>
 
    </head>
 <body style="padding:0; margin: 0; background: #000;" onLoad="didLoad()">
